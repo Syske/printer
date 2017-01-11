@@ -12,8 +12,9 @@ function text(str){
    var arr=[];
    var text=document.getElementsByClassName("text")[0];
    for(var i=0;i<str.length;i++){arr[i]=str[i];}
-   var p=document.createElement("p");
-   text.appendChild(p);
+   var p=document.getElementById("sp1");
+   var sp2=document.getElementById("sp2");
+   setInterval(function(){sp2.style.display="none";setTimeout("sp2.style.display='inline'",500);},700);
    var index=0;
    var obj=setInterval(function(){
 	   if(index<arr.length){
@@ -31,6 +32,6 @@ window.onload=function(){
 
  </head>
  <body>
-  <div class="text"></div>
+  <div class="text"><p id="ptext"><span id="sp1"></span><span id="sp2">_</span></p></div>
  </body>
 </html>
